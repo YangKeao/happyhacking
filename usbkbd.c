@@ -128,12 +128,12 @@ static void usb_kbd_irq(struct urb *urb)
 
 	static const unsigned char hjkl_map[4] = {11, 13, 14, 15};
 	static const unsigned char arrow_key_map[4] = {80, 81, 82, 79};
-	if ((kbd->new[0] >> 2) & 1) {
+	if (kbd->new[0] == 4) {
 		for(i=0;i<4;i++) {
 			unsigned char* key = memscan(kbd->new + 2, hjkl_map[i], 6);
 			if(key != kbd->new + 8) {
 				*key = arrow_key_map[i];
-				kbd->new[0] -= 4;
+				kbd->new[0] = 0;
 			}
 		}
 	}
