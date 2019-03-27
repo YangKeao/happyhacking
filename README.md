@@ -22,4 +22,4 @@ You can get `[VENDOR ID]:[PRODUCT ID]` by `lsusb`.
 
 If you can compile linux kernel yourself, you can use this `usbkbd.c` to replace it in linux source file (in `drivers/hid/usbhid/usbkbd.c`).
 
-[A patch](https://gist.github.com/YangKeao/1f5a27de16003343f7b23b1a795abb33/raw/11ae32ac73622250be16c9dcd8ea06a52b2004e8/usbkbd.diff) is also provided for gentoo user.
+[A patch](https://gist.github.com/YangKeao/1f5a27de16003343f7b23b1a795abb33) is also provided for gentoo user.
